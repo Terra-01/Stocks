@@ -1,6 +1,6 @@
 import os
 
-
+from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
@@ -29,6 +29,14 @@ uri = os.getenv("DATABASE_URL")
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://")
 db = SQL(uri)
+
+#If heroku dosent work then This method always works
+#Replace lines 28 to 31 with line 37 if you want to run it in closed environment
+#Run the program by using the given below command in the terminal
+#flask run 
+#db = SQL("sqlite:///finance.db")
+
+
 
 # Make sure API key is set
 if not os.environ.get("API_KEY"):
