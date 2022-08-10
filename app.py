@@ -35,6 +35,11 @@ db = SQL(uri)
 #Run the program by using the given below command in the terminal
 #flask run 
 #db = SQL("sqlite:///finance.db")
+#You will probably need to set the Api Key so run the given below command in the terminal
+#export API_KEY=value
+#If you have your own Api key put in that in place of value
+#If you don't have the Api key dont worry use this one
+#pk_d79f29b909da483abcba36fc23bbc48d put this in place of value
 
 
 
